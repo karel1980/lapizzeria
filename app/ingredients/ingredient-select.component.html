@@ -1,0 +1,10 @@
+<StackLayout class="page">
+  <ListView [items]="slist">
+    <ng-template let-ingredient="item">
+      <DockLayout>
+        <Label dock="right" [text]="icon(ingredient)" class="fontawesome" (tap)="toggle(ingredient.ingredient)"></Label>
+        <Label dock="left" [text]="ingredient.ingredient" (tap)="toggle(ingredient.ingredient)"></Label>
+      </DockLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>
